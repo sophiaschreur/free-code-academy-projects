@@ -1,0 +1,167 @@
+h1 {
+	font-size: 35px;
+	margin-bottom: 0;
+}
+h1,
+h2 {
+	color: darkblue;
+	display: flex;
+	justify-content: center;
+}
+h2 {
+	margin-top: 40px;
+}
+#bio {
+	display: flex;
+	justify-content: center;
+	font-size: 30px;
+	text-align: justify;
+}
+#img-div {
+	width: 100%;
+	height: 300px;
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template: "picture quote" "picture more-quotes" "caption more-quotes";
+}
+#img-parent {
+	grid-area: picture;
+	justify-self: flex-end;
+	width: 250px;
+	height: 300px;
+	text-align: center;
+	align-self: center;
+}
+img {
+	width: 100%;
+	max-width: 250px;
+	display: block;
+}
+#captionDiv {
+	grid-area: caption;
+	justify-self: right;
+	width: 250px;
+}
+#img-caption {
+	text-align: center;
+}
+.sr-only {
+	position: absolute;
+	left: -10000px;
+	width: 1px;
+	height: 1px;
+	top: auto;
+	overflow: hidden;
+}
+#quote {
+	grid-area: quote;
+	justify-self: start;
+	font-size: 25px;
+	text-align: left;
+	max-width: 250px;
+}
+#more-quotes-div {
+	max-width: 200px;
+	justify-self: left;
+	margin-left: 40px;
+}
+#more-quotes {
+	grid-area: more-quotes;
+	max-width: 250px;
+	font-size: 20px;
+	text-align: left;
+	justify-self: start;
+}
+@media (max-width: 600px) {
+	h2 {
+		margin-top: 30px;
+	}
+	#img-div {
+		width: 100%;
+		height: 400px;
+		display: grid;
+		grid-template-columns: 50% 50%;
+		grid-template: "picture picture" "quote quote" "caption caption" "more-quotes more-quotes";
+	}
+	#img-parent {
+		width: 125px;
+		height: 150px;
+		grid-area: picture;
+		justify-self: center;
+		text-align: center;
+	}
+	img {
+		width: 100%;
+	}
+	#captionDiv {
+		grid-area: caption;
+		justify-self: right;
+		width: 250px;
+	}
+	#img-caption {
+		text-align: center;
+	}
+	.sr-only {
+		position: absolute;
+		left: -10000px;
+		width: 1px;
+		height: 1px;
+		top: auto;
+		overflow: hidden;
+	}
+	#quote {
+		grid-area: quote;
+		justify-self: center;
+		font-size: 25px;
+		text-align: left;
+		max-width: 400px;
+	}
+	#more-quotes-div {
+		justify-self: center;
+		grid-area: more-quotes;
+		margin-left: 0px;
+	}
+	#more-quotes {
+		font-size: 20px;
+		margin-top: 0;
+		text-align: center;
+	}
+}
+a:hover {
+	color: blue;
+}
+ul {
+	list-style-type: square;
+}
+ul li::before {
+	content: "\2022";
+	color: darkblue;
+	font-weight: bold;
+	display: inline-block;
+	width: 1em;
+	margin-left: -1em;
+}
+li {
+	font-size: 16px;
+}
+#timeline-div {
+	width: 800px;
+	margin: 0 auto;
+}
+#more-information {
+	width: 800px;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 30px;
+	font-size: 20px;
+}
+@media (max-width: 800px) {
+	#timeline-div {
+		width: 550px;
+	}
+	@media (max-width: 550px) {
+		#timeline-div {
+			width: 450px;
+		}
+	}
+}
