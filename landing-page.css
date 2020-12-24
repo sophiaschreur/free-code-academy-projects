@@ -1,3 +1,6 @@
+nav {
+	margin-top: 0;
+}
 #nav-links {
 	top: 0;
 	right: 0;
@@ -70,7 +73,7 @@ a {
 	padding: 10px;
 	font-size: 20px;
 }
-button {
+[type="submit"] {
 	padding: 10px;
 	font-size: 20px;
 	background-color: rgb(175, 29, 242);
@@ -82,17 +85,16 @@ button {
 		width: 80vw;
 	}
 	#logo-and-text {
-		width: 100vw;
-		z-index: 3;
-		margin-top: 10px;
+		margin-top: 0;
+		height: 0;
 		justify-content: center;
 	}
 	#nav-links {
-		padding-top: 100px;
+		margin-top: 0;
 		width: 100vw;
 		margin-top: 0;
 	}
 	#learn {
-		margin-top: 200px;
+		margin-top: 100px;
 	}
 }
