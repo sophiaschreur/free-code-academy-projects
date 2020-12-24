@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invest Card</title>
+    <link rel="stylesheet" href="survey-form.css">
+</head>
+<body>
+    <div id="main">
+    <main>
+        <div id="top-sec">
+        <h1 id="title">Invest Card Survey</h1>
+        </div>
+        <p id="description">Your experience matters deeply to us. Thank you for helping us improve.</p>
+        
+        <form id="survey-form">
+            <label id="name-label">
+                Full name
+                <br>
+                <input type="text" id="name" placeholder="name" required>
+            </label>
+            <br>
+            <label id="email-label">
+                Email
+                <br>
+                <input type="email" name="" id="email" placeholder="email" required>
+            </label>
+            <br>
+            <label id="number-label">
+                How would you rate our services from 1 (terrible) to 10 (amazing)?
+                <br>
+                <input type="number" name="" id="number" min="1" max="10" placeholder="0">
+            </label>
+            <br>
+            <label id="dropdown-label">
+                How many credit and debit cards do you own (not including your Invest Card?
+                <br>
+                <select name="" id="dropdown">
+                    <option value="0">0</option>
+                    <option value="1 - 5">1 - 5</option>
+                    <option value="6 - 10">6 - 10</option>
+                    <option value="10+">10+</option>
+                </select>
+            </label>
+            <br>
+            What is the number one reason why you use your Invest Card?
+            <br>
+            <label>
+                <input type="radio" name="reason" value="limit">To limit my personal spending
+            </label>
+            <label>
+                <input type="radio" name="reason" value="allowance">For my kids' daily allowances
+            </label>
+            <label>
+                <input type="radio" name="reason" value="investments">To maximize my investments
+            </label>
+            <label>
+                <input type="radio" name="reason" value="portfolio">For creating and managing my portfolio
+            </label>
+           
+            <label>
+                <input type="radio" name="reason" value="purchasing">To simplify the purhcasing process
+            </label>
+            <br>
+            Please check the following boxes if the statements are true about you.
+            <br>
+            <label>    
+                <input type="checkbox" name="" id="" value="subscribed-to-newsletter">I am subscribed to the Invest Card Newsletter      
+            </label>
+            <label>
+                <input type="checkbox" name="" id="" value="recommended">      
+            
+            I have recommended Invest Card to friends and family   
+           </label> <br>
+            Any comments or suggestions?
+            <br>
+            <textarea name="" id="" cols="30" rows="10"></textarea> 
+            <br>
+            <button type="submit" id="submit">Submit</button>          
+        </form>
+       </main>
+    </div>
+</body>
+</html>
