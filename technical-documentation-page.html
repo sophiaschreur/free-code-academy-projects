@@ -8,16 +8,29 @@
 </head>
 <body>
     <nav id="navbar">
-        <header>Webscraping Tutorial with Python and Chrome (Windows)</header>
-        <a href="#Introduction" class="nav-link">Introduction</a>
-        <a href="#Tools_Used" class="nav-link">Tools Used</a>
-        <a href="#Base_Python_Code" class="nav-link">Base Python Code</a>
-        <a href="#Web_Navigation" class="nav-link">Web Navigation</a>
-        <a href="#Conclusion" class="nav-link">Conclusion</a>
+        <header>
+            <h1>Webscraping Tutorial with Python and Chrome (Windows)</h1>
+        </header>
+        <div id="nav-links">
+            <a href="#Introduction" class="nav-link">Introduction</a>
+            <a href="#Tools_Used" class="nav-link">Tools Used</a>
+            <a href="#Base_Python_Code" class="nav-link">Base Python Code</a>
+            <a href="#Web_Navigation" class="nav-link">Web Navigation</a>
+            <a href="#Conclusion" class="nav-link">Conclusion</a>
+        </div>
+        <div id="request">
+            <img id="my-picture" src="my-picture.png" alt="">
+            <p>
+                — If I've provided value to you, I hope you'll consider providing value back.
+                Let's keep this mutually beneficial relationship going!
+            </p>
+        </div>
     </nav>
     <main id="main-doc">
         <section class="main-section" id="Introduction">
-            <header>Introduction</header>
+             <header>
+               Introduction
+            </header>
             <p>
                 Learning to scrape the web using Python is a daunting task.
                 When I was getting started, it took many many many hours. 
@@ -25,53 +38,184 @@
                 Since then, I really haven't had the need to learn anything else.
                 I just reused the same code over and over again, applying it to different websites in a variety of projects. 
                 This tutorial will teach you the basics of webscraping in Python (which is really quite easy) and will explain some pitfalls to watch out for.
-                In about 20 to 30 minutes you will be ready to work on your own webscraping projects.
+                After completing this guide, you will be ready to work on your own webscraping projects.
                 Happy coding!
             </p> 
         </section>
         <section class="main-section" id="Tools_Used">
-            <header>Tools Used</header>
+            <header>
+                Tools Used
+            </header>
             <p>
                 These are the tools you will use.
                 Maybe, if you're like me, you too will fall in love with them for their incredible utility.
                 I have also included some explanation on each tool's function and what you'll need to do in order to get it set up right.
             </p>
             <ol>
-                <li>Google Chrome</li>
-                <p></p>
-                <li>Chrome Driver</li>
-                <p></p>
-                <li>Anaconda</li>
-                <p></p>
-                <li>Jupyter Notebook</li>
-                <p></p>
-                <li>Selenium</li>
-                <p></p>
+                <li>
+                    <h3>Google Chrome</h3>
+                </li>
+                <p>
+                    To get the webscraper to work you need either the Google Chrome or the Foxfire Browser.
+                    We will use Google Chrome.
+                    If you don't have it already downloaded, <a href="https://www.google.com/chrome/">click here</a>.
+                    Once you have it downloaded, click on stacked triple circle icon in the upper right.
+                    Then click Help and then click About Chrome.
+                    Note the version number.
+                    This will be important for the next tool.
+                </p>
+                <li>
+                    <h3>Chrome Driver</h3>                
+                </li>
+                <p>
+                    Our next tool is called Chrome Driver.
+                    Chrome Driver will do the work of our application and execute our python code.
+                    <a href="https://chromedriver.chromium.org/">Click here</a> to download and make sure you match up the Chrome Driver version number with the Google Chrome version number you recorded earlier.
+                    Periodically, you may come to find that your code has randomly stopped working.
+                    In my experience, this is usually caused by an update in Google Chrome to a new version that leaves the Chrome Driver outdated.
+                    If this ever happens to you, simply download the newest version and delete the old one and placing it in the same location in your files.
+                    And that reminds me of another point that should be made.
+                    The location of Chrome Driver is quite important.
+                    Where you choose to place it will determine the location of the folder that will contain your webscraping code.  
+                </p>
+                <li>
+                    <h3>Anaconda</h3>
+                </li>
+                <p>
+                    The next step is to get Anaconda downloaded which you can find <a href="https://docs.anaconda.com/anaconda/install/windows/">here</a>.
+                    Anaconda contains a bundle of resourcs, the most important of which, for our purposes, is Jupyter Notebook.
+                    Click through the downloading process without much care apart from keeping your eye out for a section that has you place a folder where your code will go.
+                    Honestly, I can't remember if the folder location determination occurs in this section or what.
+                    If I'm wrong here, simply search on Google something like "change where Jupyter Notebook creates files."
+                </p>
+                <li>
+                    <h3>Jupyter Notebook</h3>
+                </li>
+                <p>
+                    Alright, next we have Jupyter Notebook.
+                    It is a relatively simple text editor.
+                    If you have Anaconda downloaded, you can press start and search for Jupyter Notebook, click on it, and the notebook should open.
+                    Navigate to the folder where you want the python code to be located and then press new and then Python 3 to create your file.
+                </p>
+                <li>
+                    <h3>Selenium</h3>
+                </li>
+                <p>
+                    The last tool you will use is the Selenium package for python.
+                    This package contains the names of the functions you will use to write your webscraper.
+                    Very important!
+                    If you don't already have it downloaded, search for Anaconda Prompt and click on it.
+                    Then type <code>pip install selenium</code>, wait for selenium to be downloaded or to be confirmed that it is already downloaded.
+                    Setup over! Bring on the copy and pasting, am I right?
+                </p>
             </ol>
         </section>
         <section class="main-section" id="Base_Python_Code">
-            <header>Base Python Code</header>
-            <p></p>
-            <p></p>
-            <code></code>
-            <p></p>
-            <code></code>
-            <p></p>
-            <code></code>
+            <header>
+               Base Python Code
+            </header>
+            <p>You may copy and paste the following code into your Jupyter Notebook file.</p>
+            <code>import selenium</code>
+            <br>
+            <code>from selenium import webdriver</code>
+            <br>
+            <code>import pandas as pd</code>  
+            <br>
+            <code>from selenium.webdriver.common.by import By</code>
+            <br>
+            <code>from selenium.webdriver.support.ui import WebDriverWait</code>
+            <br>    
+            <code>from selenium.webdriver.support import expected_conditions as EC</code>
+            <br>
+            <p>
+                The above code will import the selenium library and will give a simpler name to one of the Selenium functions.
+                Next, you can link the python code to the Chrome Driver. Use the following code with the executable_path set to your machine's Chrome Driver location. 
+                Mine looks like this.
+            </p>
+            <code>driver = webdriver.Chrome(executable_path = 'C:/Users/Ethan Schreur/Documents/chromedriver.exe'</code>
+            <p>
+                Base code over!
+                Now things will get interesting because you are ready to code the scraper!
+            </p>
         </section>
         <section class="main-section" id="Web_Navigation">
-            <header>Web Navigation</header>
-            <p></p>
-            <p></p>
-            <code></code>
-            <p></p>
-            <code></code>
-            <p></p>
-            <code></code>
+            <header>
+                Web Navigation</header>
+                <p>
+                This section will teach you the basic commands you can give your program to do the scraping.
+                </p>
+            
+            <h3>Opening the Website</h3>
+            <p>
+                Following the line where you link your code to the Chrome Driver, you can open the website of your choice.
+                <code>driver.get('~link to your desired website~')</code>
+                Easy, right? Now how will you interact with the website's elements? Here is where Xpath comes in.
+            </p>
+            <h3>XPath</h3>
+            <p>
+                XPath is an incredibly easy way to help Chrome Driver find elements on a website.
+                To get the XPath of an element, right click over that element and press inspect.
+                This will open up DevTools. 
+                You can look in the html code and hover your cursor over different lines.
+                Hovering over different lines will highlight the element on the actual website.
+                You can do all of these things (look at the code, right click / inspect, or look at the highlights) to find the right code for the element.
+                Then, right click on the code, press Copy, and press one of two options Copy XPath or Copy full XPath.
+                Full XPath is longer than regular XPath and for the most part the regular XPath works fine. 
+                But its good to be aware of the longer path in case it ever becomes useful.
+                Knowing how to find the Xpath of an element is the most important skill for the amateur scraper.
+                It's also quite fun!
+            </p>
+            <h3>Caution</h3>
+            <p>
+                One problem you may come across on your webscraping journey is the following.
+                You've found the correct XPATH.
+                Your code is correct.
+                Yet the webscraper still doesn't work.
+                The reason may be that the page hasn't fully loaded when your program is trying to scrape the page.
+                The solution is to make your Webdriver wait until the element is clickable.
+                <br>
+                <code>WebDriverWait(driver, 50).until(EC.element_to_be_clickable((By.XPATH, '~Paste the element's XPath here~')))</code>
+                <br>
+                This code waits up to 50 seconds until the element has loaded and is now clickable.
+                I think this code only is useful when you are trying to click elements.
+                But just to be safe, I use this code anytime my program selects an element.
+            </p>
+            <h3>Scraping Text</h3>
+            <p>    
+                You've navigatted to the website and you've waited until your target element loads.
+                If the target element contains text, this code will scrape that text.
+                <br>
+                <code>your_element = driver.find_element_by_xpath('~Paste the element's Xpath here~')</code>
+                <br>
+                <code>your_element_text = your_element.text</code>
+            </p>
+            <h3>Clicking Elements</h3>
+            <p>
+                Everytime I talk about interacting with elements, from here on out, I will assume you've made the scraper wait until the target is clickable.
+                If you then want to click that element, this code will do just that.
+                <br>
+                <code>
+                    driver.find_element_by_xpath(~Paste the element's Xpath~').click()
+                </code>
+            </p>
+            <h3>Filling Out Forms (Logging In)</h3>
+            <p>
+                Finally, to fill out forms in order to, for example, log in or sign up, your code will need to send text to the element that accepts text.
+                You do this by sending keys.
+                <br>
+                <code>driver.find_element_by_xpath(~Paste the element's Xpath~).send_keys('~The text you wish to send~')</code>  
+                <br>
+                Then, if there is a submit button you wish to click, follow the .click() code in the previous section to submit the form.
+            </p>
         </section>
         <section class="main-section" id="Conclusion">
-            <header>Conclusion</header>
-            <p></p>
+            <header>
+                Conclusion</header>
+                <p>
+                    There you go!
+                    You've learned the basics of webscraping in Python and are now equipped to work on your own web scraping projects.
+                </p>
+            
         </section>
     </main>
 </body>
